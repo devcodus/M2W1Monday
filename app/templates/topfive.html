@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>David's Top Five Artists</h1>
+    <h3>Welcome</h3>
+
+    {% for person in people %}
+
+        
+        <div>
+            <img src="{{person['img']}}">
+        </div>
+        <div>
+            <h4>{{person['name']}}</h4>
+        </div>
+
+    {% endfor %}
+
+    <h6>this is also dynamically served from python:<a href="{{url_for('homePage')}}">Return Home</a></h6>
+
+</body>
+</html>
